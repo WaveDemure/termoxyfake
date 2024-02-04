@@ -12,7 +12,7 @@ document.getElementById("exec").onclick = async (event) => {
           alert(err.toString())
           throw err;
         }
-        const url = search(address, searchEngine); 
+        const url = search(address.value, searchEngine.value); 
         var editorContent = document.getElementById("editor").value;
         var newEditorContent = `try {${editorContent}} catch (error) {alert(error)}`
         console.log(newEditorContent)
