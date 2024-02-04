@@ -1,3 +1,6 @@
+const address = document.getElementById("editor").value;
+const searchEngine = "https://www.google.com/search?q=%s"
+
 document.getElementById("exec").onclick = async (event) => {
     if (sessionStorage.getItem('swRun') === "true") {
         event.preventDefault();
@@ -9,7 +12,7 @@ document.getElementById("exec").onclick = async (event) => {
           alert(err.toString())
           throw err;
         }
-        const url = search(address.value, searchEngine.value); 
+        const url = search(address, searchEngine); 
         var editorContent = document.getElementById("editor").value;
         var newEditorContent = `try {${editorContent}} catch (error) {alert(error)}`
         console.log(newEditorContent)
