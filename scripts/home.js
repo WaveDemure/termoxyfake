@@ -1,5 +1,5 @@
-const address = document.getElementById("inputUrl").value;
-const searchEngine = "https://www.google.com/search?q=%s"
+const address = document.getElementById("address");
+const searchEngine = document.getElementById("search-engine");
 
 document.getElementById("exec").onclick = async (event) => {
     if (sessionStorage.getItem('swRun') === "true") {
