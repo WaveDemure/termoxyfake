@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termoxy</title>
+    <script src="uv/uv.bundle.js" defer></script>
+    <script src="uv/uv.config.js" defer></script>
+    <script src="register-sw.js" defer></script>
+    <script src="search.js" defer></script>
+    <script src="scripts/home.js" defer></script>
+    <style>
+        body {
+            background-color: black;
+            width: 100%;
+            height: 100%;
+            margin: 0; 
+            overflow: hidden;
+        }
+
+        #editor {
+            position: absolute;
+            left: 50vw;
+            transform: translateX(-50%);
+            width: 75vw;
+            height: 50vh;
+            color: white;
+            background-color: black;
+            border: 10px solid rgba(255, 255, 255, 0.3);
+            border-radius: 16px;
+            resize: none;
+        }
+
+        #inputUrl {
+            position: absolute;
+            left: 50vw;
+            bottom: 35vh;
+            width: 75vw;
+            border: 10px solid rgba(255, 255, 255, 0.3);
+            border-radius: 16px;
+            background-color: black;
+            transform: translateX(-50%);
+        }
+
+        #exec {
+            bottom: 5px;
+            left: 50vw;
+            position: absolute;
+            transform: translateX(-50%);
+        }
+
+        .iframe{
+            position: absolute;
+            width:100%;
+            height: 100%;
+            left:0px;
+            top:0px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <textarea id="editor">alert(1);</textarea>
+    <input type="text" id="inputUrl" placeholder="Input Url">
+    <button id="exec">Execute</button>
+
+
+</body>
+</html>
