@@ -1,4 +1,4 @@
-const address = document.getElementById("editor").value;
+const address = document.getElementById("inputUrl").value;
 const searchEngine = "https://www.google.com/search?q=%s"
 
 document.getElementById("exec").onclick = async (event) => {
