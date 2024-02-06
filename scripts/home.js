@@ -8,7 +8,6 @@ const payloadJson = [
 ]
 
 document.getElementById("form").onsubmit = async (event) => {
-    if (sessionStorage.getItem('swRun') === "true") {
         event.preventDefault();
 
         try {
@@ -33,7 +32,6 @@ document.getElementById("form").onsubmit = async (event) => {
         ifm.src = __uv$config.prefix + __uv$config.encodeUrl(url)
         ifm.id = "iframe";ifm.classList.add('iframe');ifm.onload = function () {var script=document.createElement("script");script.src="./scripts/injector.js";document.body.appendChild(script);}
         document.body.appendChild(ifm);
-    }
 }
 
 function createPayload(name, code) {
